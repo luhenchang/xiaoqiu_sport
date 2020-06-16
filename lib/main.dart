@@ -1,0 +1,41 @@
+import 'dart:io';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:xiaoqiu_sport/views/splash_page.dart';
+import 'package:xiaoqiu_sport/public.dart';
+// import 'package:xiaoqiu_sports/utils/sp_util.dart';
+
+Future<void> main() async {
+  // WidgetsFlutterBinding.ensureInitialized();
+  runApp(new MyApp());
+  if (Platform.isAndroid) {
+      SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(
+      systemNavigationBarColor: Color(0xffffffff),
+      systemNavigationBarIconBrightness: Brightness.dark,
+      systemNavigationBarDividerColor: Color(0xffffffff),
+      statusBarColor: Colors.black,
+      statusBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.light,
+    );
+     SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
+  }
+
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final router = Router();
+    Routes.configureRoutes(router);
+    Routes.router = router;
+
+    return Container(
+      child: MaterialApp(
+          title: "球街",
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(primaryColor: Colors.white),
+          onGenerateRoute: Routes.router.generator,
+          home: SplashPage()),
+    );
+  }
+}

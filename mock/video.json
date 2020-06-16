@@ -1,0 +1,25 @@
+{
+    "state": "200",
+    "message": "success",
+    "data": [{
+            "title": "23日五佳球，登封造极！",
+            "imageUrl": "http://img1.gtimg.com/chinanba/pics/hv1/245/191/2306/149996600.jpg",
+            "videoUrl": "https://media.w3.org/2010/05/sintel/trailer.mp4"
+        },
+        {
+            "title": "全队配合无缝衔接，维特斯三分举火烧天",
+            "imageUrl": "http://img1.gtimg.com/chinanba/pics/hv1/220/143/2307/150049360.jpg",
+            "videoUrl": "https://media.w3.org/2010/05/sintel/trailer.mp4"
+        },
+        {
+            "title": "不可阻挡，塔图姆突然快攻双手暴扣",
+            "imageUrl": "http://img1.gtimg.com/chinanba/pics/hv1/197/143/2307/150049337.jpg",
+            "videoUrl": "https://media.w3.org/2010/05/sintel/trailer.mp4"
+        },
+        {
+            "title": "说时迟那时快，韦大爷魔力舞步飞身上篮",
+            "imageUrl": "http://img1.gtimg.com/chinanba/pics/hv1/184/143/2307/150049324.jpg",
+            "videoUrl": "https://media.w3.org/2010/05/sintel/trailer.mp4"
+        }
+    ]
+}

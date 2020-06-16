@@ -1,0 +1,49 @@
+{
+    "state": "200",
+    "message": "success",
+    "data": [{
+
+            "type": 0,
+            "hostteam": "火箭",
+            "hostteamlogo": "HOU_logo.svg",
+            "hostgoal": 10,
+            "guestteam": "湖人",
+            "guestteamlogo": "LAL_logo.svg",
+            "guestgoal": 8,
+            "state": 1
+        },
+        {
+
+            "type": 0,
+            "hostteam": "凯尔特人",
+            "hostteamlogo": "BOS_logo.svg",
+            "hostgoal": 100,
+            "guestteam": "热火",
+            "guestteamlogo": "MIA_logo.svg",
+            "guestgoal": 98,
+            "state": 2
+        },
+        {
+
+            "type": 0,
+            "hostteam": "76人",
+            "hostteamlogo": "PHI_logo.svg",
+            "hostgoal": 113,
+            "guestteam": "老鹰",
+            "guestteamlogo": "ATL_logo.svg",
+            "guestgoal": 123,
+            "state": 1
+        },
+        {
+
+            "type": 0,
+            "hostteam": "黄蜂",
+            "hostteamlogo": "HOU_logo.svg",
+            "hostgoal": 0,
+            "guestteam": "鹈鹕",
+            "guestteamlogo": "NOP_logo.svg",
+            "guestgoal": 0,
+            "state": 0
+        }
+    ]
+}
