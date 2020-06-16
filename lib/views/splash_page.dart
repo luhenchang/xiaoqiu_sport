@@ -64,6 +64,7 @@ class SplashPageState extends State<SplashPage> {
                 ),
               ],
             ),
+
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
