@@ -20,7 +20,7 @@ class SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
     SpUtil.getInstance();
-    Future.delayed(new Duration(seconds: 1), () {
+    Future.delayed(new Duration(seconds:0), () {
       if (SpUtil.getBool("sp_is_allogin") != null && SpUtil.getBool("sp_is_allogin")){
         Navigator.pop(context);
         Routes.navigateTo(context, Routes.indexPage, clearStack: true);
@@ -28,17 +28,6 @@ class SplashPageState extends State<SplashPage> {
         Navigator.pop(context);
         Routes.navigateTo(context, Routes.loginPage, clearStack: true);
       }
-      // print("登录状态:");
-      // print(UserUtil.isLogin());
-      // print("用户token:");
-      // print(UserUtil.getUserToken());
-      // if (!UserUtil.isLogin()) {
-      //   Navigator.pop(context);
-      //   Routes.navigateTo(context, Routes.loginPage, clearStack: true);
-      // } else {
-      //   Navigator.pop(context);
-      //   Routes.navigateTo(context, Routes.indexPage, clearStack: true);
-      // }
     });
   }
 
@@ -64,7 +53,6 @@ class SplashPageState extends State<SplashPage> {
                 ),
               ],
             ),
-
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
