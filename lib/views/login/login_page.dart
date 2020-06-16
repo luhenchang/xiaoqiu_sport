@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:xiaoqiu_sport/utils/net_utils.dart';
 import 'package:xiaoqiu_sport/api/api_service.dart';
 import 'package:xiaoqiu_sport/utils/constant.dart';
@@ -352,7 +353,8 @@ class _LoginPageState extends State<LoginPage>
   }
 
   Future doLogin() async {
-    SpUtil.putBool("sp_is_allogin", true);
+    var loginStatuShared=await SharedPreferences.getInstance();
+    Future<bool> loginStatu= loginStatuShared.setBool("sp_is_allogin",true);
     print('开始登录');
     if (null == _phone || _phone.isEmpty) {
       ToastUtil.showError("请输入手机号");
@@ -367,17 +369,19 @@ class _LoginPageState extends State<LoginPage>
     var response = await NetUtils.post(ApiService.login_verifyCode_URL, _param);
     print(response);
     if (response['code'] != 200) {
+
       print("登录失败");
       ToastUtil.showError(response['message']);
     } else {
       print("登录成功");
+
       // UserUtil.saveUserInfo(response['data']['userInfo']);
       // UserUtil.saveUserToken(response['data']['token']);
-      SpUtil.putBool("sp_is_allogin", true);
+      /*SpUtil.putBool("sp_is_allogin", true);
       SpUtil.putString("sp_token", response['data']['token']);
       print("本地保存成功");
       print(SpUtil.getBool("sp_is_allogin"));
-      print(SpUtil.getString("sp_token"));
+      print(SpUtil.getString("sp_token"));*/
       Navigator.pop(context);
       Routes.navigateTo(context, Routes.indexPage);
     }

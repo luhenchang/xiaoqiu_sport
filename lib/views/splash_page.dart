@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:xiaoqiu_sport/utils/constant.dart';
 import 'package:xiaoqiu_sport/routers/routers.dart';
 import 'package:xiaoqiu_sport/utils/sp_util.dart';
@@ -20,8 +21,10 @@ class SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
     SpUtil.getInstance();
-    Future.delayed(new Duration(seconds:0), () {
-      if (SpUtil.getBool("sp_is_allogin") != null && SpUtil.getBool("sp_is_allogin")){
+    Future.delayed(new Duration(seconds:0), () async {
+      var loginStatuShared=await SharedPreferences.getInstance();
+      bool loginStatu= loginStatuShared.getBool("sp_is_allogin");
+      if (loginStatu!= null && loginStatu){
         Navigator.pop(context);
         Routes.navigateTo(context, Routes.indexPage, clearStack: true);
       }else{
