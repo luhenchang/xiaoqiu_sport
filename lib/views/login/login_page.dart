@@ -374,7 +374,6 @@ class _LoginPageState extends State<LoginPage>
       ToastUtil.showError(response['message']);
     } else {
       print("登录成功");
-
       // UserUtil.saveUserInfo(response['data']['userInfo']);
       // UserUtil.saveUserToken(response['data']['token']);
       /*SpUtil.putBool("sp_is_allogin", true);
